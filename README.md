@@ -10,6 +10,10 @@ Vous êtes-vous déjà demandé si un produit valait vraiment le coup avant de l
 
 **AgroCheck** est une application web qui répond exactement à cette question. Elle rassemble des avis réels de vraies personnes et les affiche de manière claire et honnête — pas de faux scores, pas d'avis cachés.
 
+## 💡 Visitez le site en ligne
+Vous pouvez visiter le site en ligne ici : [agrocheck](http://http://137.184.98.100/)
+
+
 ---
 
 ## ✨ Qu'est-ce qu'on peut faire avec ?
@@ -42,79 +46,42 @@ La page d'accueil affiche aussi une section **"Mieux notés"** en bas de page, a
 
 ---
 
-## 🚀 Comment lancer le projet
+## 🚀 Comment lancer le projet local
 
 L'application a deux parties qui doivent tourner en même temps : le **serveur** (qui gère les données) et l'**interface** (ce que vous voyez dans votre navigateur).
 
 ---
 
-### Étape 1 — Démarrer le serveur
-
-Ouvrez un terminal et allez dans le dossier `backend` :
-
+### Étape 1 — setup du serveur backend 
 ```bash
 cd backend
+uv sync
+uv run python manage.py migrate  
+uv run python manage.py seed_data
 ```
 
-Créez un environnement isolé pour garder les choses propres :
-
+### Etape 2 — Démarrer le serveur backend
 ```bash
-python -m venv venv
-source venv/bin/activate        # Mac / Linux
-venv\Scripts\activate           # Windows
+uv run python manage.py runserver 8000
 ```
-
-Installez ce dont le serveur a besoin :
-
-```bash
-pip install django djangorestframework django-cors-headers
-```
-
-Préparez la base de données :
-
-```bash
-python manage.py migrate
-```
-
-Créez votre compte administrateur (vous en aurez besoin pour ajouter des produits) :
-
-```bash
-python manage.py createsuperuser
-```
-
-Lancez le serveur :
-
-```bash
-python manage.py runserver
-```
-
 Le serveur tourne maintenant sur **http://localhost:8000**
 
 ---
 
-### Étape 2 — Démarrer l'interface
-
-Ouvrez un deuxième terminal et allez dans le dossier `frontend` :
+### Étape 3 — setup de l'interface frontend
 
 ```bash
 cd frontend
 npm install
-npm run dev
+npm run build
 ```
 
+### Etape 4 — Démarrer l'interface frontend
+
+```bash
+npm run start -- --port 3000
+```
 L'application est maintenant accessible dans votre navigateur à **http://localhost:3000**
-
----
-
-## 🛠️ Comment ajouter des produits
-
-Une fois les deux parties lancées :
-
-1. Rendez-vous sur **http://localhost:8000/admin**
-2. Connectez-vous avec le compte administrateur que vous avez créé
-3. De là, vous pouvez ajouter des **catégories** et des **produits** — donnez à chaque produit un nom, une description, un lien d'image et une catégorie
-
-Dès qu'un produit est ajouté, il apparaît sur l'application et tout le monde peut le voir et le noter.
 
 ---
 
