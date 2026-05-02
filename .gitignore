@@ -1,0 +1,147 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# ========================
+# Django
+# ========================
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Media & static (if generated locally)
+media/
+staticfiles/
+
+# Django secret & env files
+.env
+.env.*
+*.env
+
+# Migrations (optional - only if you regenerate migrations)
+# Uncomment ONLY if you know what you're doing
+# */migrations/*.py
+# */migrations/*.pyc
+# !*/migrations/__init__.py
+
+# ========================
+# IDE / Editors
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Node (if frontend in same repo)
+# ========================
+node_modules/
+.next/
+out/
+dist/
+
+# ========================
+# Testing / coverage
+# ========================
+htmlcov/
+.coverage
+coverage.xml
+.pytest_cache/
+
+# ========================
+# uv / pip
+# ========================
+uv.lock
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========================
+# Production
+# ========================
+*.pem
+*.key
+*.crt
+
+# ========================
+# Dependencies
+# ========================
+node_modules/
+
+# ========================
+# Next.js build output
+# ========================
+.next/
+out/
+dist/
+
+# ========================
+# Logs
+# ========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ========================
+# Environment variables
+# ========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ========================
+# TypeScript
+# ========================
+*.tsbuildinfo
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / Editors
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# Coverage / testing
+# ========================
+coverage/
+.nyc_output/
+
+# ========================
+# Optional (if using TurboRepo / monorepo)
+# ========================
+.turbo/
+
+# ========================
+# Docker (if used)
+# ========================
+*.pid
+*.seed
+*.pid.lock
