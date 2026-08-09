@@ -225,13 +225,13 @@ class Command(BaseCommand):
             # ======================
             reviews = PRODUCT_REVIEWS.get(p["name"], [])
 
-            for r in reviews:
+            for review_index, r in enumerate(reviews, start=1):
                 Review.objects.create(
                     product=product,
                     name=r["name"],
                     rating=r["rating"],
                     comment=r["comment"],
-                    ip_address=f"192.168.0.{random.randint(1, 254)}",
+                    ip_address=f"192.168.{i}.{review_index}",
                     created_at=now - timedelta(days=random.randint(1, 60))
                 )
 
