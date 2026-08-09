@@ -52,6 +52,12 @@ L'application a deux parties qui doivent tourner en même temps : le **serveur**
 
 ---
 
+### Étape 0 — Installer uv
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env
+```
+
 ### Étape 1 — setup du serveur backend 
 ```bash
 cd backend
